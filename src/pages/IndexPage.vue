@@ -26,6 +26,14 @@
           val => val > 0 && val < 100 || 'Please type a real age'
         ]"
       />
+       <q-input
+        filled
+        v-model="name"
+        label="Your name *"
+        hint="Name and surname"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please type something']"
+      />
 
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
