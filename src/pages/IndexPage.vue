@@ -19,7 +19,7 @@
        <q-input
         filled
         v-model="name"
-        label="Your name *"
+        label="您的姓氏 *"
         hint="Name and surname"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
