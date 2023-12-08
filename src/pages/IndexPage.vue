@@ -15,6 +15,15 @@
         :rules="[ val => val && val.length > 0 || 'Please type something']"
       />
 
+      
+       <q-input
+        filled
+        v-model="name"
+        label="Your name *"
+        hint="Name and surname"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please type something']"
+      />
       <q-input
         filled
         type="number"
@@ -26,15 +35,6 @@
           val => val > 0 && val < 100 || 'Please type a real age'
         ]"
       />
-       <q-input
-        filled
-        v-model="name"
-        label="Your name *"
-        hint="Name and surname"
-        lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
-      />
-
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
@@ -53,8 +53,8 @@ import { ref } from 'vue'
 export default {
   setup () {
     const $q = useQuasar()
-
     const name = ref(null)
+    const name1 = ref(null)
     const age = ref(null)
     const accept = ref(false)
 
